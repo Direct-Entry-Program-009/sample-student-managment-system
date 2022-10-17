@@ -15,34 +15,43 @@
     <h1 class="text-center py-3">Student Management System</h1>
     <div class="row">
         <div class="col-xl-4">
-            <form action="#">
+            <form id="frm-student" action="#">
                 <div>
-                    <button id="btn-new" class="btn btn-success">+ New Student</button>
+                    <button id="btn-new" class="btn btn-success" type="button">+ New Student</button>
                 </div>
                 <div class="form-floating mt-2">
-                    <input type="text" class="form-control" id="txt-ID" placeholder="Student ID" disabled>
+                    <input type="text" class="form-control" id="txt-ID" placeholder="Student ID" disabled readonly>
                     <label for="txt-ID">Student ID</label>
                   </div>
                 <div class="form-floating mt-2">
-                    <input type="text" class="form-control" id="txt-Name" placeholder="Student Name" disabled>
-                    <label for="txt-Name">Student Name</label>
+                    <input type="text" class="form-control" id="txt-name" placeholder="Student Name" disabled>
+                    <label for="txt-name">Student Name</label>
+                    <div class="invalid-feedback">
+                        Please enetera valid Student Name
+                    </div>
                 </div>
                 <div class="form-floating mt-2">
                     <input type="text" class="form-control" id="txt-address" placeholder="Student Address" disabled>
                     <label for="txt-address">Student Address</label>
+                    <div class="invalid-feedback">
+                        Please enetera valid Student Address
+                    </div>
                   </div>
                   <div class="form-floating mt-2">
                     <input type="text" class="form-control" id="txt-contact" placeholder="Student Contact" disabled>
                     <label for="txt-contact">Student Contact</label>
+                    <div class="invalid-feedback">
+                        Please enetera valid Student Contact
+                    </div>
                   </div>
                   <div class="mt-2">
-                    <button id="btn-save" disabled class="btn btn-primary" type="button">Save Student</button>
+                    <button id="btn-save" disabled class="btn btn-primary" type="submit">Save Student</button>
                     <button id="btn-clear" disabled class="btn btn-warning" type="button">Clear</button>
                   </div>
             </form>
         </div>
-        <div class="col-xl-8">
-            <table class="table table-hover">
+        <div class="col-xl-8 mt-4">
+            <table id="tbl-students" class="table table-hover empty">
                 <colgroup>
                     <col class="col-id">
                     <col class="col-name">
@@ -58,13 +67,6 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>S001</td>
-                        <td>Tharindu</td>
-                        <td>Galle</td>
-                        <td><i class="bi bi-trash3"></i></td>
-                    </tr>
-
                 </tbody>
                 <tfoot>
                     <tr>

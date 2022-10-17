@@ -1,4 +1,15 @@
+
 table {
+    &.empty tfoot{//here & represent the parent
+        display: table-footer-group;
+    }
+    tfoot{
+        display: none;
+    }
+    tbody tr.selected{ //here this is a if statement, if tr has a class which name is selected when below style will apply
+        background-color: lightblue;
+    }
+
     td:first-child,th:first-child,td:last-child{
         text-align: center;
     }
@@ -23,5 +34,5 @@ table {
     width: 200px;
 }
 .col-contact{
-    width: 70px;
+    width: 100px;
 }
